@@ -55,6 +55,7 @@ Opciones:
 
 ## Team members/ Miembros del equipo
 
-Add the names and GitHub IDs of your team members here.
-
-Agregue los nombres y las ID de GitHub de los miembros de su equipo aquí.
+Alejandro Benjamín Núñez. Benjaminmxxx
+Alvaro Gabriel de la Torre Navarro. delatorrena2016
+Eduardo Padron. fullmakeralchemist
+Sharon Gutierrez Ch. SharonGutierrezCH
