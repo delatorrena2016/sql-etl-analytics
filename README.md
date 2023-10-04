@@ -11,9 +11,6 @@ There should be one GitHub repository per team. /  Debería haber un repositorio
 ## Theme of your project / Tema de tu proyecto
 
 1. Extract Transform Load (ETL) pipeline with an analytics component / Pipeline de Extracción, Transformación y Carga (ETL) con un componente analítico
-2. Extract Transform Load (ETL) pipeline with a machine learning (ML) component  / Pipeline de Extracción, Transformación y Carga (ETL) con un componente de aprendizaje automático (ML)
-3. Retrieval Augmented Generation (RAG) pipeline for question answering /  Pipeline de Generación Aumentada por Recuperación (RAG) para responder preguntas
-4. Retrieval Augmented Generation (RAG) pipeline for chatbot /  Pipeline de Generación Aumentada por Recuperación (RAG) para chatbot
 
 ## Description / Descripción 
 
@@ -55,6 +52,8 @@ Opciones:
 
 ## Team members/ Miembros del equipo
 
-Add the names and GitHub IDs of your team members here.
-
-Agregue los nombres y las ID de GitHub de los miembros de su equipo aquí.
+* Alejandro Benjamín Núñez. [Benjaminmxxx](https://github.com/Benjaminmxxx)
+* Alvaro Gabriel de la Torre Navarro. [delatorrena2016](https://github.com/delatorrena2016)
+* Eduardo Padron. [fullmakeralchemist](https://github.com/fullmakeralchemist)
+* Sharon Gutierrez Ch. [SharonGutierrezCH](https://github.com/SharonGutierrezCH)
+* Cristian Camilo Hidalgo G. [CCHidalgoG](https://github.com/CCHidalgoG)
