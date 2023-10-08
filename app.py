@@ -43,8 +43,26 @@ average_sales = round(df_selection["Total Sales"].mean(), 2)
 left_column, right_column = st.columns(2)
 
 with left_column:
-    st.header("Total Sales: ")
+    st.header("Total Sales:")
     st.subheader(f"US $ {total_sales:,}")
 with right_column:
-    st.header("Average Sales: ")
+    st.header("Average Sales:")
     st.subheader(f"US $ {average_sales:}")
+
+st.markdown("""---""")
+
+# SALES BY PRODUCT
+
+# SALES BY PRODUCT LINE [BAR CHART]
+sales_by_product_line = df_selection.groupby(by=["Product"])[["Total Sales"]].sum().sort_values(by="Total Sales")
+fig_product_sales = px.bar(
+    sales_by_product_line,
+    x="Total Sales",
+    y=sales_by_product_line.index,
+    orientation="h",
+    title="<b>Sales by Product</b>",
+    color_discrete_sequence=["#0083B8"] * len(sales_by_product_line),
+    template="plotly_white",
+)
+
+st.plotly_chart(fig_product_sales)
