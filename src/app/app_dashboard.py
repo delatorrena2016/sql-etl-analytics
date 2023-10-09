@@ -47,7 +47,7 @@ with left_column:
     st.subheader(f"US $ {total_sales:,}")
 with right_column:
     st.header("Average Sales:")
-    st.subheader(f"US $ {average_sales:}")
+    st.subheader(f"US $ {average_sales:,}")
 
 st.markdown("""---""")
 
