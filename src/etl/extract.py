@@ -66,3 +66,65 @@ if __name__ == "__main__":
     table_name = 'data_sales_adidas'
     # Save the cleaned data to DuckDB
     save_to_duckdb(df, table_name, f'{data_dir}/adidas.duckdb')
+
+# +
+import os
+import kaggle
+import pandas as pd
+import duckdb
+
+
+# Check if 'data' folder exists, if not, create it
+# Set the path relative to the script
+def extract_data(dataset_id, data_dir):
+    """Extract data from URL and return a dataframe"""
+    # Check if 'data' folder exists, if not, create it
+    if not os.path.exists(data_dir):
+        os.makedirs(data_dir)
+
+    # Download data from Kaggle and save it to 'data' folder
+    kaggle.api.authenticate()
+    kaggle.api.dataset_download_files(dataset_id, path=data_dir, unzip=True)
+
+    df = pd.read_csv(f'{data_dir}/shopping_trends.csv')
+    return df
+
+def save_to_duckdb(df, table_name, db_path):
+    """Save dataframe to duckdb"""
+    conn = duckdb.connect(db_path)
+    conn.register('df', df)
+    
+    # Check if table already exists, if not, create it
+    tables = conn.execute("SHOW TABLES").fetchall()
+    if table_name not in [table[0] for table in tables]:
+        conn.execute(f"CREATE TABLE {table_name} AS SELECT * FROM df")
+    
+    conn.close()
+
+def extract_unique_season_and_category(df):
+    #create a copy
+    df_copy_2 = df.copy()
+
+    # Extract unique values for 'Season' and 'Category' columns
+    unique_seasons = df_copy_2['Season'].unique()
+    unique_categories = df_copy_2['Category'].unique()
+    
+    print("Unique Seasons:", unique_seasons)
+    print("Unique Categories:", unique_categories)
+
+    return df_copy_2
+
+if __name__ == "__main__":
+
+    # Extract data from URL
+    kaggle_id = 'iamsouravbanerjee/customer-shopping-trends-dataset'
+    data_dir = os.path.join('.', 'data')
+    df = extract_data(kaggle_id,data_dir)
+    clean_df = extract_unique_season_and_category(df)
+    
+    table_name = 'data_shopping_trends'
+    # Save the cleaned data to DuckDB
+    save_to_duckdb(df, table_name, f'{data_dir}/trends.duckdb')
+# -
+
+
