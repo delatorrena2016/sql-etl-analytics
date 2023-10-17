@@ -83,8 +83,8 @@ if __name__ == "__main__":
     table_name = 'data_sales_adidas'
     # Save the cleaned data to DuckDB
     save_to_duckdb(df_adidas, table_name, f'{data_dir}/adidas.duckdb')
+# -
 
-# +
 
     # Extract data from URL
     kaggle_id = 'iamsouravbanerjee/customer-shopping-trends-dataset'
@@ -94,7 +94,6 @@ if __name__ == "__main__":
     
     table_name = 'data_shopping_trends'
     # Save the cleaned data to DuckDB
-    save_to_duckdb(clean_df_trends, table_name, f'{data_dir}/trends.duckdb')
-# -
+    save_to_duckdb(clean_df_trends, table_name, f'{data_dir}/adidas.duckdb')
 
 

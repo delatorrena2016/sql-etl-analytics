@@ -2,4 +2,4 @@ tasks:
   - source: src/etl/extract.py
     product:
       nb: src/logs/extract-pipeline.ipynb
-      data: src/data/trends.duckdb
+      data: src/data/adidas.duckdb
