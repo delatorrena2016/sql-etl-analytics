@@ -176,3 +176,4 @@ src/products/*
 # But do not ignore .gitkeep files
 !src/products/.gitkeep
 src/data/adidas.duckdb.wal
+src/logs/extract-pipeline.ipynb
