@@ -73,7 +73,7 @@ def data_cleaning_and_saving(df):
 
 if __name__ == "__main__":
 
-    # Extract data from URL
+    # First data extraction from URL
     kaggle_id = 'heemalichaudhari/adidas-sales-dataset'
     data_dir = os.path.join('.', 'src/data')
     file_name_adidas = "Adidas US Sales Datasets.xlsx"
@@ -86,7 +86,7 @@ if __name__ == "__main__":
 # -
 
 
-    # Extract data from URL
+    # Second data extraction from URL
     kaggle_id = 'iamsouravbanerjee/customer-shopping-trends-dataset'
     file_name_trends  = "shopping_trends.csv"
     df_trends = extract_data(kaggle_id,data_dir, file_name_trends)
@@ -96,4 +96,13 @@ if __name__ == "__main__":
     # Save the cleaned data to DuckDB
     save_to_duckdb(clean_df_trends, table_name, f'{data_dir}/adidas.duckdb')
 
+    
 
+    # Third data extraction from URL
+    kaggle_id = 'kaushiksuresh147/adidas-vs-nike'
+    file_name  = "Adidas Vs Nike.csv"
+    df = extract_data(kaggle_id,data_dir, file_name)
+    
+    table_name = 'data_adidasvsnike'
+    # Save the cleaned data to DuckDB
+    save_to_duckdb(df, table_name, f'{data_dir}/adidas.duckdb')
