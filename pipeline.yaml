@@ -3,3 +3,6 @@ tasks:
     product:
       nb: src/logs/extract-pipeline.ipynb
       data: src/data/adidas.duckdb
+  - source: src/etl/eda.ipynb
+    product: 
+      nb: src/logs/eda-pipeline.ipynb
