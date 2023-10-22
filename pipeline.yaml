@@ -4,5 +4,6 @@ tasks:
       nb: src/logs/extract-pipeline.ipynb
       data: src/data/adidas.duckdb
   - source: src/etl/eda.ipynb
+    static_analysis: disable
     product: 
       nb: src/logs/eda-pipeline.ipynb
