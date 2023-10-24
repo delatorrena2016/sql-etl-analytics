@@ -52,8 +52,5 @@ Opciones:
 
 ## Team members/ Miembros del equipo
 
-* Alejandro Benjamín Núñez. [Benjaminmxxx](https://github.com/Benjaminmxxx)
 * Alvaro Gabriel de la Torre Navarro. [delatorrena2016](https://github.com/delatorrena2016)
 * Eduardo Padron. [fullmakeralchemist](https://github.com/fullmakeralchemist)
-* Sharon Gutierrez Ch. [SharonGutierrezCH](https://github.com/SharonGutierrezCH)
-* Cristian Camilo Hidalgo G. [CCHidalgoG](https://github.com/CCHidalgoG)
