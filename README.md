@@ -3,7 +3,10 @@
 # **Team's project:** Extract Transform Load (ETL) pipeline of Adidas sales and further product information, with an analytics component for sales trends and successful product identification, competitive research, and more
 *All team members have completed all steps in the [set up](setup.md) document.*
 
-<img src="https://github.com/delatorrena2016/sql-etl-analytics/blob/Exploratory-work/images/ETL PLOOMBER.png" width=150px/> 
+<p align="center">
+<img src="images/ETL PLOOMBER.png" width=150px/>
+</p>
+
 
 ## Description 
 
