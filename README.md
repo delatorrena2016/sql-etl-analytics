@@ -4,7 +4,7 @@
 *All team members have completed all steps in the [set up](setup.md) document.*
 
 <p align="center">
-<img src="images/ETL PLOOMBER.png" width=150px/>
+<img src="images/ETL PLOOMBER.png" width=720px/>
 </p>
 
 
