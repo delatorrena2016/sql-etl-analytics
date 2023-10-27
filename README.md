@@ -5,13 +5,11 @@
 
 ## Description 
 
-Provide a description of your project. Include the data sources you are using, the tools you are using, and the expected outcome of your project.
-
 We've developed an ETL (Extract, Transform, Load) pipeline for data analysis automation, specific to Adidas sales and main competitor sales, based on the provided datasets on section **Data sources**. This we think, can help address several important business problems and drive informed decision-making, for Adidas and for anyone in hopes of better understanding one's business as the ideas discussed here are universal. 
 
-Our EDA (Exploratory data analysis) provides Adidas with a comprehensive understanding of its sales and customer data. This knowledge can be used to make data-driven decisions, tailor marketing strategies, optimize product offerings, improve customer satisfaction, and align business strategies with customer needs and preferences.
+We hope our project provides Adidas with a comprehensive understanding of its sales and customer data on a simple Dashboard over an easy to mantain, modify and improve data process. This knowledge can be used to make data-driven decisions, tailor marketing strategies, optimize product offerings, improve customer satisfaction, and align business strategies with customer needs and preferences.
 
-Appart from the contribution of our own insights displayed through our EDA; With the help of the good people from [Ploomber](https://ploomber.io/), we've build an application (Dashboard) with [JupySQL](https://jupysql.ploomber.io/en/latest/quick-start.html) + [Voila](https://voila.readthedocs.io/en/stable/index.html) as framework, with the use of a pipeline to prepare the data (ETL) automatically by tasks (see .yaml), and in the process generate subsecuent products as reports or logs (metadata), and Dashboard updates. We perform dataset extraction from 3 different Kaggle sources, cleaning, organizing and saving to an in-memory database [DuckDB](https://duckdb.org/) once prepared for storage and subsequent data analysis. Application is [Dockerized](https://www.docker.com/) as well. We used [MotherDuck](https://motherduck.com/docs/intro) for in-cloud data storage for our application.
+Appart from the contribution of our own insights displayed through our EDA (Exploratory Data Analysis); With the help of the good people from [Ploomber](https://ploomber.io/), we've build an application (Dashboard) with [JupySQL](https://jupysql.ploomber.io/en/latest/quick-start.html) + [Voila](https://voila.readthedocs.io/en/stable/index.html) as framework, with the use of a pipeline to prepare the data (ETL) automatically by tasks (see .yaml), and in the process generate subsecuent products as reports or logs (metadata), and Dashboard updates. We perform dataset extraction from 3 different Kaggle sources, cleaning, organizing and saving to an in-memory database [DuckDB](https://duckdb.org/) once prepared for storage and subsequent data analysis. Application is [Dockerized](https://www.docker.com/) as well. We used [MotherDuck](https://motherduck.com/docs/intro) for in-cloud data storage for our application.
 
 ## Data sources
 
