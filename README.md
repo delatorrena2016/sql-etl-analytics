@@ -3,7 +3,7 @@
 # **Team's project:** Extract Transform Load (ETL) pipeline of Adidas sales and further product information, with an analytics component for sales trends and successful product identification, competitive research, and more
 *All team members have completed all steps in the [set up](setup.md) document.*
 
-<img src="https://github.com/delatorrena2016/sql-etl-analytics/blob/Exploratory-work/images/COMIC%20(1).png" width=150px/> 
+<img src="https://github.com/delatorrena2016/sql-etl-analytics/blob/Exploratory-work/images/ETL PLOOMBER.png" width=150px/> 
 
 ## Description 
 
@@ -65,7 +65,7 @@ base de datos en la nube mother duck es de codigo abierto es gratuito y podemos 
 
 Describe the user interface your project will have. Include a description of the tools you are using.
 
-3. Voila dashboard
+3. Voila dashboard deployed in Ploomber Cloud
 
 ## Team members
 
