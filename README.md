@@ -1,36 +1,31 @@
 # Hacktoberfest 2023 project: building ETL and RAG pipelines with open source 
 
-## Set up /  Configuración
-
-There should be one GitHub repository per team. /  Debería haber un repositorio de GitHub por equipo.
-
-**Ensure all team members have completed all steps in the [set up](setup.md) document.**
-
-**Asegúrate de que todos los miembros del equipo hayan completado todos los pasos en el [documento de configuración](setup-espanol.md).**
-
-## Theme of your project / Tema de tu proyecto
-
-1. Extract Transform Load (ETL) pipeline with an analytics component / Pipeline de Extracción, Transformación y Carga (ETL) con un componente analítico
+# **Team's project:** Extract Transform Load (ETL) pipeline of Adidas sales and further product information, with an analytics component for sales trends and successful product identification, competitive research, and more.
+*All team members have completed all steps in the [set up](setup.md) document.*
 
 ## Description / Descripción 
 
 Provide a description of your project. Include the data sources you are using, the tools you are using, and the expected outcome of your project.
 
-Proporcione una descripción de su proyecto. Incluya las fuentes de datos que está utilizando, las herramientas que está utilizando y el resultado esperado de su proyecto.
+Creating an ETL (Extract, Transform, Load) data analysis for Adidas based on the provided datasets can help address several important business problems and drive informed decision-making. Here's how the ETL data analysis can be beneficial for Adidas:
 
 ## Data sources / Fuentes de datos
 
-Provide a detailed description of your data sources. Please ensure you work only with open source data. Include a link to the data you are working with. 
-
-Agregue una descripción detallada de sus fuentes de datos. Asegúrese de trabajar solo con datos de código abierto. Incluya un enlace a los datos con los que está trabajando.
-
-**Do not upload data to GitHub** / **No suba datos a GitHub**
+The following are the used data sources, all of public domain: 
+1. [adidas-sales-dataset](https://www.kaggle.com/datasets/heemalichaudhari/adidas-sales-dataset) by Heemali Chaudhari is licensed under CC0 1.0.
+    * Adidas sales dataset is a collection of data that includes information on the sales of Adidas products. This type of dataset may include details such as the number of units sold, the total sales revenue, the location of the sales, the type of product sold, and any other relevant information.
+    * It contains 9652 rows and 14 columns in total. (698.66 kB)
+2. [adidas-vs-nike](https://www.kaggle.com/datasets/kaushiksuresh147/adidas-vs-nike/) by Kaushik Suresh licensed under CC0 1.0.
+    * Contains product information about Nike and Adidas (Adidas is further divided into sub-brands), feature information including their ratings, discount, sales price, listed price, product description, and the number of reviews.
+    * It contains 3268 rows and 10 columns in total. (1.21 MB)
+3. [customer-shopping-trends-dataset](https://www.kaggle.com/datasets/iamsouravbanerjee/customer-shopping-trends-dataset/data) by Sourav Banerjee is licensed under CC0 1.0.
+    * The Customer Shopping Preferences Dataset offers valuable insights into consumer behavior and purchasing patterns. This dataset captures a wide range of customer attributes including age, gender, purchase history, preferred payment methods, frequency of purchases, and more.
+    * It contains 3900 rows and 18 columns in total. (453.25 kB)
+*Specific provenance is listed for all datasets in the respective Kaggle websites.*
 
 ## Methods / Métodos
 
 Describe the methods you are using. Include a description of the tools you are using.
-
-Describa los métodos que está utilizando. Incluya una descripción de las herramientas que está utilizando.
 
 ## User interface your project will have / Interfaz de usuario que tendrá su proyecto
 
@@ -41,14 +36,6 @@ Options:
 1. FastAPI application
 2. Chainlit application
 3. Voila dashboard
-
-Describa la interfaz de usuario que tendrá su proyecto. Incluya una descripción de las herramientas que está utilizando.
-
-Opciones:
-
-1. Aplicación FastAPI
-2. Aplicación Chainlit
-3. Tablero Voila
 
 ## Team members/ Miembros del equipo
 
