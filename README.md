@@ -3,7 +3,7 @@
 # **Team's project:** Extract Transform Load (ETL) pipeline of Adidas sales and further product information, with an analytics component for sales trends and successful product identification, competitive research, and more
 *All team members have completed all steps in the [set up](setup.md) document.*
 
-<img src="https://github.com/delatorrena2016/sql-etl-analytics/blob/Exploratory-work/images/COMIC%20(1).png" width=30px/> 
+<img src="https://github.com/delatorrena2016/sql-etl-analytics/blob/Exploratory-work/images/COMIC%20(1).png" width=150px/> 
 
 ## Description 
 
@@ -30,11 +30,10 @@ The following are the used data sources, all of public domain:
 
 ## Methods
 
-Describe the methods you are using. Include a description of the tools you are using.
 ### Staging
 1. Extraction, Transformation and Loading
     * Cast read datasets to dataframe using [Pandas](https://pandas.pydata.org/docs/index.html) according to file extention; .csv, .xlsx.
-        * Align dataset for better tab form.
+        * Align dataset for better tabular form.
         * Formatting; Date, etc.
         * Drop unuseful data for process speed; ID, Date retrieval, etc. (This datasets do not have NaN, already seen from describe() Pandas method)
     * Save each dataset as table to local database DuckDB file logically.
@@ -42,7 +41,7 @@ Describe the methods you are using. Include a description of the tools you are u
 
 *Back and forth between ETL and wrangle during EDA process.*
 
-2. Wrangle *Heavy use of matplotlib for plotting, numpy and pandas for calculations and statistics*
+2. Wrangle. *Heavy use of matplotlib for plotting, numpy and pandas for calculations and statistics*
     * adidas-sales-dataset
         * Descriptive statistics
     * adidas-vs-nike
@@ -62,17 +61,13 @@ Describe the methods you are using. Include a description of the tools you are u
 conectar nuestra app para comunicarnos con los usuarios, esos procesos son de manera interna y solo veran un tablero con visualizaciones
 base de datos en la nube mother duck es de codigo abierto es gratuito y podemos combinar duckdb y motherduck con python por que duckdb, los procesos son muy similares lo que cambia es como carga pero la idea es la misma,staging area de prototipos y area produccion, despues queremos que los usuarios interactuan con los datos pero sin darles accesos para que no existan problemas, la aplicacion seria un dashboard, un usuario puede llegar e interactuar de manera que definimos, con dashboard podemos generar visualizaciones o graficas y el usuario la va a poder ver
 
-## User interface your project will have / Interfaz de usuario que tendrá su proyecto
+## User interface your project will have
 
 Describe the user interface your project will have. Include a description of the tools you are using.
 
-Options: 
-
-1. FastAPI application
-2. Chainlit application
 3. Voila dashboard
 
-## Team members/ Miembros del equipo
+## Team members
 
 * Alvaro Gabriel de la Torre Navarro. [delatorrena2016](https://github.com/delatorrena2016)
 * Eduardo Padron. [fullmakeralchemist](https://github.com/fullmakeralchemist)
