@@ -1,14 +1,11 @@
 # Hacktoberfest 2023 project: building ETL and RAG pipelines with open source 
-
-# **Team's project:** Extract Transform Load (ETL) pipeline of Adidas sales and further product information, with an analytics component for sales trends and successful product identification, competitive research, and more
-*All team members have completed all steps in the [set up](setup.md) document.*
-
 <p align="center">
 <img src="images/ETL PLOOMBER.png" width=720px/>
 </p>
+# **Team's project:** Extract Transform Load (ETL) pipeline of Adidas sales and further product information, with an analytics component for sales trends and successful product identification, competitive research, and more
+*All team members have completed all steps in the [set up](setup.md) document.*
 
 [![Ploombler project: Transforming a Company through Building a ETL for Data Analysis with Ploomber](https://github.com/delatorrena2016/sql-etl-analytics/blob/Exploratory-work/images/VideoProjectScreenshot.png)](https://www.youtube.com/embed/qsj7ONz98nQ?si=Dj3qvzInbYqyc0Au "Ploombler project: Transforming a Company through Building a ETL for Data Analysis with Ploomber")
-
 
 ## Description 
 
@@ -65,6 +62,8 @@ The following are the used data sources, all of public domain:
 ## User interface your project will have
 
 We convert Jupyter Notebooks visualizations to interactive Dashboards with Python Voila, application is hosted on [Ploomber Cloud](https://ploomber.io/cloud/). This way users don't need to install Python or any other dependencies to interact with the dashboard; all scripts run on the browser, users are also allowed to read and not edit the visualizations so as to mantain the integrity of the EDA. Easy to share HTML files.
+
+![User Interface of dashboard](https://github.com/delatorrena2016/sql-etl-analytics/blob/Exploratory-work/images/ScreenshotApp.gif)
 
 We are proud to show the fininshed [Dashboard](https://purple-brook-2899.ploomberapp.io/) for the you to see.
 
