@@ -7,6 +7,8 @@
 <img src="images/ETL PLOOMBER.png" width=720px/>
 </p>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qsj7ONz98nQ?si=Dj3qvzInbYqyc0Au" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 
 ## Description 
 
@@ -60,15 +62,11 @@ The following are the used data sources, all of public domain:
 5. Voila
 6. Ploomber Cloud
 
-
-conectar nuestra app para comunicarnos con los usuarios, esos procesos son de manera interna y solo veran un tablero con visualizaciones
-base de datos en la nube mother duck es de codigo abierto es gratuito y podemos combinar duckdb y motherduck con python por que duckdb, los procesos son muy similares lo que cambia es como carga pero la idea es la misma,staging area de prototipos y area produccion, despues queremos que los usuarios interactuan con los datos pero sin darles accesos para que no existan problemas, la aplicacion seria un dashboard, un usuario puede llegar e interactuar de manera que definimos, con dashboard podemos generar visualizaciones o graficas y el usuario la va a poder ver
-
 ## User interface your project will have
 
-Describe the user interface your project will have. Include a description of the tools you are using.
+We convert Jupyter Notebooks visualizations to interactive Dashboards with Python Voila, application is hosted on [Ploomber Cloud](https://ploomber.io/cloud/). This way users don't need to install Python or any other dependencies to interact with the dashboard; all scripts run on the browser, users are also allowed to read and not edit the visualizations so as to mantain the integrity of the EDA. Easy to share HTML files.
 
-3. Voila dashboard deployed in Ploomber Cloud
+We are proud to show the fininshed [Dashboard](https://purple-brook-2899.ploomberapp.io/) for the you to see.
 
 ## Team members
 
