@@ -7,7 +7,7 @@
 <img src="images/ETL PLOOMBER.png" width=720px/>
 </p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qsj7ONz98nQ?si=Dj3qvzInbYqyc0Au" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[![Ploombler project: Transforming a Company through Building a ETL for Data Analysis with Ploomber](https://github.com/delatorrena2016/sql-etl-analytics/blob/Exploratory-work/images/VideoProjectScreenshot.png)](https://www.youtube.com/embed/qsj7ONz98nQ?si=Dj3qvzInbYqyc0Au "Ploombler project: Transforming a Company through Building a ETL for Data Analysis with Ploomber")
 
 
 ## Description 
