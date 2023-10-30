@@ -1,59 +1,75 @@
 # Hacktoberfest 2023 project: building ETL and RAG pipelines with open source 
 
-## Set up /  Configuración
+<p align="center">
+<img src="images/ETL PLOOMBER.png" width=720px/>
+</p>
 
-There should be one GitHub repository per team. /  Debería haber un repositorio de GitHub por equipo.
+# **Team's project:** Extract Transform Load (ETL) pipeline of Adidas sales and further product information, with an analytics component for sales trends and successful product identification, competitive research, and more
+*All team members have completed all steps in the [set up](setup.md) document.*
 
-**Ensure all team members have completed all steps in the [set up](setup.md) document.**
+[![Ploombler project: Transforming a Company through Building a ETL for Data Analysis with Ploomber](https://github.com/delatorrena2016/sql-etl-analytics/blob/Exploratory-work/images/VideoProjectScreenshot.png)](https://www.youtube.com/embed/qsj7ONz98nQ?si=Dj3qvzInbYqyc0Au "Ploombler project: Transforming a Company through Building a ETL for Data Analysis with Ploomber")
 
-**Asegúrate de que todos los miembros del equipo hayan completado todos los pasos en el [documento de configuración](setup-espanol.md).**
+## Description 
 
-## Theme of your project / Tema de tu proyecto
+We've developed an ETL (Extract, Transform, Load) pipeline for data analysis automation, specific to Adidas sales and main competitor sales, based on the provided datasets on section **Data sources**. This we think, can help address several important business problems and drive informed decision-making, for Adidas and for anyone in hopes of better understanding one's business as the ideas discussed here are universal. 
 
-1. Extract Transform Load (ETL) pipeline with an analytics component / Pipeline de Extracción, Transformación y Carga (ETL) con un componente analítico
+Appart from the contribution of our own insights displayed through our EDA (Exploratory Data Analysis); With the help of the good people from [Ploomber](https://ploomber.io/), we've build an application (Dashboard) with [JupySQL](https://jupysql.ploomber.io/en/latest/quick-start.html) + [Voila](https://voila.readthedocs.io/en/stable/index.html) as framework, with the use of a pipeline to prepare the data (ETL) automatically by tasks (see .yaml), and in the process generate subsecuent products as reports or logs (metadata), and Dashboard updates. We perform dataset extraction from 3 different Kaggle sources, cleaning, organizing and saving to an in-memory database [DuckDB](https://duckdb.org/) once prepared for storage and subsequent data analysis. Application is [Dockerized](https://www.docker.com/) as well. We used [MotherDuck](https://motherduck.com/docs/intro) for in-cloud data storage for our application.
 
-## Description / Descripción 
+We hope our project provides Adidas with a comprehensive understanding of its sales and customer data on a simple Dashboard over an easy to mantain, modify and improve data process. This knowledge can be used to make data-driven decisions, tailor marketing strategies, optimize product offerings, improve customer satisfaction, and align business strategies with customer needs and preferences.
 
-Provide a description of your project. Include the data sources you are using, the tools you are using, and the expected outcome of your project.
+## Data sources
 
-Proporcione una descripción de su proyecto. Incluya las fuentes de datos que está utilizando, las herramientas que está utilizando y el resultado esperado de su proyecto.
+The following are the used data sources, all of public domain: 
+1. [adidas-sales-dataset](https://www.kaggle.com/datasets/heemalichaudhari/adidas-sales-dataset) by Heemali Chaudhari licensed under CC0 1.0.
+    * Adidas sales dataset is a collection of data that includes information on the sales of Adidas products. This type of dataset may include details such as the number of units sold, the total sales revenue, the location of the sales, the type of product sold, and any other relevant information.
+    * It contains 9652 rows and 14 columns in total. (698.66 kB)
+2. [adidas-vs-nike](https://www.kaggle.com/datasets/kaushiksuresh147/adidas-vs-nike/) by Kaushik Suresh licensed under CC0 1.0.
+    * Contains product information about Nike and Adidas (Adidas is further divided into sub-brands), feature information including their ratings, discount, sales price, listed price, product description, and the number of reviews.
+    * It contains 3268 rows and 10 columns in total. (1.21 MB)
+3. [customer-shopping-trends-dataset](https://www.kaggle.com/datasets/iamsouravbanerjee/customer-shopping-trends-dataset/data) by Sourav Banerjee licensed under CC0 1.0.
+    * The Customer Shopping Preferences Dataset offers valuable insights into consumer behavior and purchasing patterns. This dataset captures a wide range of customer attributes including age, gender, purchase history, preferred payment methods, frequency of purchases, and more.
+    * It contains 3900 rows and 18 columns in total. (453.25 kB)
 
-## Data sources / Fuentes de datos
+*Specific provenance is listed for all datasets in the respective Kaggle websites.*
 
-Provide a detailed description of your data sources. Please ensure you work only with open source data. Include a link to the data you are working with. 
+## Methods
 
-Agregue una descripción detallada de sus fuentes de datos. Asegúrese de trabajar solo con datos de código abierto. Incluya un enlace a los datos con los que está trabajando.
+### Staging
+1. Extraction, Transformation and Loading
+    * Cast read datasets to dataframe using [Pandas](https://pandas.pydata.org/docs/index.html) according to file extention; .csv, .xlsx.
+        * Align dataset for better tabular form.
+        * Formatting; Date, etc.
+        * Drop unuseful data for process speed; ID, Date retrieval, etc. (This datasets do not have NaN, already seen from describe() Pandas method)
+    * Save each dataset as table to local database DuckDB file logically.
+        * Tables existence verification.
 
-**Do not upload data to GitHub** / **No suba datos a GitHub**
+*Back and forth between ETL and wrangle during EDA process.*
 
-## Methods / Métodos
+2. Wrangle. *Heavy use of matplotlib for plotting, numpy and pandas for calculations and statistics*
+    * adidas-sales-dataset
+        * Descriptive statistics
+    * adidas-vs-nike
+        * Descriptive statistics, i.e. Average Listing Price. 
+        * Discount gap.
+        * Product offer amount by brand and by sub-brand. 
+        * Costumer satisfaction and popularity from rating and reviews.
+        * Same brand best selling products.
+    * customer-shopping-trends-dataset
+### Production
+3. Dockerize
+4. MotherDuck
+5. Voila
+6. Ploomber Cloud
 
-Describe the methods you are using. Include a description of the tools you are using.
+## User interface your project will have
 
-Describa los métodos que está utilizando. Incluya una descripción de las herramientas que está utilizando.
+![User Interface of dashboard](https://github.com/delatorrena2016/sql-etl-analytics/blob/Exploratory-work/images/ScreenshotApp.gif)
 
-## User interface your project will have / Interfaz de usuario que tendrá su proyecto
+We convert Jupyter Notebooks visualizations to interactive Dashboards with Python Voila, application is hosted on [Ploomber Cloud](https://ploomber.io/cloud/). This way users don't need to install Python or any other dependencies to interact with the dashboard; all scripts run on the browser, users are also allowed to read and not edit the visualizations so as to mantain the integrity of the EDA. Easy to share HTML files.
 
-Describe the user interface your project will have. Include a description of the tools you are using.
+We are proud to show the fininshed [Dashboard](https://purple-brook-2899.ploomberapp.io/) for the you to see.
 
-Options: 
+## Team members
 
-1. FastAPI application
-2. Chainlit application
-3. Voila dashboard
-
-Describa la interfaz de usuario que tendrá su proyecto. Incluya una descripción de las herramientas que está utilizando.
-
-Opciones:
-
-1. Aplicación FastAPI
-2. Aplicación Chainlit
-3. Tablero Voila
-
-## Team members/ Miembros del equipo
-
-* Alejandro Benjamín Núñez. [Benjaminmxxx](https://github.com/Benjaminmxxx)
 * Alvaro Gabriel de la Torre Navarro. [delatorrena2016](https://github.com/delatorrena2016)
 * Eduardo Padron. [fullmakeralchemist](https://github.com/fullmakeralchemist)
-* Sharon Gutierrez Ch. [SharonGutierrezCH](https://github.com/SharonGutierrezCH)
-* Cristian Camilo Hidalgo G. [CCHidalgoG](https://github.com/CCHidalgoG)
